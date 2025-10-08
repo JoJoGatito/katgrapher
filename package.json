@@ -1,0 +1,19 @@
+{
+  "name": "katgrapher-studio",
+  "version": "1.0.0",
+  "description": "Portfolio website for katgrapher.studio",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/input.css -o ./dist/output.css --minify"
+  },
+  "keywords": [
+    "portfolio",
+    "photography",
+    "sanity-cms"
+  ],
+  "author": "KatGrapher",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

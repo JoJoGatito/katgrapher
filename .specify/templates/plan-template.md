@@ -47,7 +47,21 @@
 ## Constitution Check
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Accessibility & Inclusive Media
+  - All images include accurate alt text; decorative images use empty alt
+  - Contrast meets WCAG 2.2 AA; full keyboard navigation
+- Simplicity & Performance Budget
+  - Photos served as WebP with lazy loading; responsive srcset provided
+  - p95 LCP (mobile) < 2.5s; CLS < 0.1; avoid layout shifts from media
+- Content Authenticity & Consent
+  - Rights/consent verified (model/location releases as required)
+  - DJ mixes include full tracklists; no unlawful redistribution
+  - Data anonymized/aggregated; sources and limitations documented
+- Attribution & Transparency
+  - Credits for collaborators/sources; libraries/datasets listed
+  - Maintain change log for substantive edits
+- Preview & Publish Checks
+  - Run pre-publish audits: accessibility, performance budgets, licensing, cross-device preview
 
 ## Project Structure
 
@@ -216,4 +230,4 @@ directories captured above]
 - [ ] Complexity deviations documented
 
 ---
-*Based on Constitution v2.1.1 - See `/memory/constitution.md`*
+*Based on Constitution v1.0.0 - See `.specify/memory/constitution.md`*
