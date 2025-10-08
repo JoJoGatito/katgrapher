@@ -4,7 +4,7 @@
   "description": "Portfolio website for katgrapher.studio",
   "main": "index.html",
   "scripts": {
-    "build": "tailwindcss -i ./assets/input.css -o ./dist/output.css --minify"
+    "build": "rm -rf dist && mkdir -p dist && tailwindcss -i ./assets/input.css -o ./dist/output.css --minify && cp index.html dist/index.html && cp gallery.html dist/gallery.html && cp -R scripts dist/scripts"
   },
   "keywords": [
     "portfolio",
