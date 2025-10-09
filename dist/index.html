@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KatGrapher Studio - Photography and Web Development Portfolio">
+    <meta name="keywords" content="photography, web development, portfolio, katgrapher">
+    <meta name="author" content="KatGrapher">
+    <title>KatGrapher Studio - Photography & Web Development</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.sanity.io">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body class="bg-background text-white min-h-screen">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-green text-black px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="relative z-10">
+        <nav class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <a href="./" class="hover:text-brand-neon transition-colors">
+                        KatGrapher<span class="text-brand-green">.Studio</span>
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-8">
+                    <a href="#websites" class="hover:text-brand-green transition-colors">Web</a>
+                    <a href="#photography" class="hover:text-brand-green transition-colors">Photography</a>
+                    <a href="#dj" class="hover:text-brand-green transition-colors">DJ</a>
+                    <a href="#contact" class="hover:text-brand-green transition-colors">Contact</a>
+                    <a href="gallery.html" class="bg-brand-green hover:bg-brand-green-dark text-black px-4 py-2 rounded transition-colors">
+                        Gallery
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center px-6">
+            <div class="container mx-auto text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        <span class="text-white">Kat</span><span class="text-brand-green">Grapher</span>
+                        <span class="text-brand-yellow">.Studio</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
+                        Capturing moments through photography and crafting digital experiences through web development
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#websites" class="bg-brand-green hover:bg-brand-green-dark text-black px-8 py-3 rounded font-semibold transition-colors">
+                            View Web Work
+                        </a>
+                        <a href="gallery.html" class="border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-black px-8 py-3 rounded font-semibold transition-colors">
+                            View Photography
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Websites Showcase Section -->
+        <section id="websites" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                        Web <span class="text-brand-green">Development</span>
+                    </h2>
+
+                    <!-- Featured Projects Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                        <!-- Project placeholders - will be populated from Sanity -->
+                        <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-brand-green transition-colors">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <span class="text-gray-400">Project Image</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-brand-green">Featured Project</h3>
+                                <p class="text-gray-300 mb-4">Project description will be loaded from Sanity CMS</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-brand-yellow text-black px-2 py-1 rounded text-sm">React</span>
+                                    <span class="bg-brand-yellow text-black px-2 py-1 rounded text-sm">Node.js</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-brand-green hover:text-brand-neon transition-colors">Live Demo</a>
+                                    <a href="#" class="text-brand-green hover:text-brand-neon transition-colors">Source</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-brand-green transition-colors">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <span class="text-gray-400">Project Image</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-brand-green">Portfolio Site</h3>
+                                <p class="text-gray-300 mb-4">Custom portfolio website with CMS integration</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-brand-yellow text-black px-2 py-1 rounded text-sm">Next.js</span>
+                                    <span class="bg-brand-yellow text-black px-2 py-1 rounded text-sm">Sanity</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-brand-green hover:text-brand-neon transition-colors">Live Demo</a>
+                                    <a href="#" class="text-brand-green hover:text-brand-neon transition-colors">Source</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 hover:border-brand-green transition-colors">
+                            <div class="aspect-video bg-gray-800 flex items-center justify-center">
+                                <span class="text-gray-400">Project Image</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2 text-brand-green">E-commerce Platform</h3>
+                                <p class="text-gray-300 mb-4">Full-stack e-commerce solution with payment integration</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-brand-yellow text-black px-2 py-1 rounded text-sm">Vue.js</span>
+                                    <span class="bg-brand-yellow text-black px-2 py-1 rounded text-sm">Express</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="#" class="text-brand-green hover:text-brand-neon transition-colors">Live Demo</a>
+                                    <a href="#" class="text-brand-green hover:text-brand-neon transition-colors">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-gray-400 mb-6">More projects loading from Sanity CMS...</p>
+                        <a href="#contact" class="bg-brand-yellow hover:bg-brand-yellow-dark text-black px-8 py-3 rounded font-semibold transition-colors">
+                            Start a Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photography Teaser Section -->
+        <section id="photography" class="py-20 px-6 bg-gray-900">
+            <div class="container mx-auto">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                                <span class="text-brand-green">Photography</span>
+                            </h2>
+                            <p class="text-xl text-gray-300 mb-8">
+                                Nature, portraits, and macro photography capturing the beauty in the details.
+                                Specialized in animal and insect photography with a focus on conservation and education.
+                            </p>
+                            <div class="flex flex-wrap gap-4 mb-8">
+                                <span class="bg-brand-green text-black px-3 py-1 rounded">Nature</span>
+                                <span class="bg-brand-green text-black px-3 py-1 rounded">Macro</span>
+                                <span class="bg-brand-green text-black px-3 py-1 rounded">Wildlife</span>
+                                <span class="bg-brand-green text-black px-3 py-1 rounded">Portraits</span>
+                            </div>
+                            <a href="gallery.html" class="bg-brand-green hover:bg-brand-green-dark text-black px-8 py-3 rounded font-semibold transition-colors">
+                                View Full Gallery
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <!-- Photo placeholders -->
+                            <div class="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-400 text-sm">Photo 1</span>
+                            </div>
+                            <div class="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-400 text-sm">Photo 2</span>
+                            </div>
+                            <div class="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-400 text-sm">Photo 3</span>
+                            </div>
+                            <div class="aspect-square bg-gray-800 rounded-lg flex items-center justify-center">
+                                <span class="text-gray-400 text-sm">Photo 4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DJ Section -->
+        <section id="dj" class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-12">
+                        <span class="text-brand-yellow">DJ</span> Services
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Creating unforgettable atmospheres through curated music selections.
+                        Specializing in weddings, corporate events, and private parties.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                        <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                            <h3 class="text-xl font-semibold mb-4 text-brand-yellow">Weddings</h3>
+                            <p class="text-gray-300">Making your special day memorable with the perfect soundtrack</p>
+                        </div>
+                        <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                            <h3 class="text-xl font-semibold mb-4 text-brand-yellow">Corporate</h3>
+                            <p class="text-gray-300">Professional events and company celebrations</p>
+                        </div>
+                        <div class="bg-gray-900 p-8 rounded-lg border border-gray-800">
+                            <h3 class="text-xl font-semibold mb-4 text-brand-yellow">Private Events</h3>
+                            <p class="text-gray-300">Birthday parties, anniversaries, and celebrations</p>
+                        </div>
+                    </div>
+
+                    <p class="text-gray-400 mb-6">Equipment and music library will be loaded from Sanity CMS...</p>
+                    <a href="#contact" class="bg-brand-yellow hover:bg-brand-yellow-dark text-black px-8 py-3 rounded font-semibold transition-colors">
+                        Book DJ Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 bg-gray-900">
+            <div class="container mx-auto">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-12">
+                        Let's <span class="text-brand-green">Work</span> Together
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-12">
+                        Ready to bring your vision to life? Whether it's a website, photography project, or event DJ services, I'd love to hear from you.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                        <a href="mailto:me@jordanclark.email" class="bg-brand-green hover:bg-brand-green-dark text-black px-8 py-4 rounded font-semibold transition-colors text-lg">
+                            me@jordanclark.email
+                        </a>
+                        <a href="#contact-form" class="border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-black px-8 py-4 rounded font-semibold transition-colors text-lg">
+                            Send Message
+                        </a>
+                    </div>
+
+                    <!-- Contact form placeholder -->
+                    <div id="contact-form" class="max-w-2xl mx-auto">
+                        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                            <p class="text-gray-400 mb-4">Contact form will be loaded from Sanity CMS...</p>
+                            <div class="space-y-4">
+                                <div class="bg-gray-900 p-3 rounded">
+                                    <span class="text-gray-500">Name field</span>
+                                </div>
+                                <div class="bg-gray-900 p-3 rounded">
+                                    <span class="text-gray-500">Email field</span>
+                                </div>
+                                <div class="bg-gray-900 p-3 rounded">
+                                    <span class="text-gray-500">Message field</span>
+                                </div>
+                                <button class="bg-brand-green hover:bg-brand-green-dark text-black px-6 py-3 rounded font-semibold transition-colors w-full">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-800">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">
+                        © 2024 KatGrapher Studio. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <a href="#hero" class="text-gray-400 hover:text-brand-green transition-colors">Back to Top</a>
+                    <a href="gallery.html" class="text-gray-400 hover:text-brand-green transition-colors">Gallery</a>
+                    <a href="#contact" class="text-gray-400 hover:text-brand-green transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="./scripts/main.js"></script>
+</body>
+</html>

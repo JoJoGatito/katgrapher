@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photography Gallery - KatGrapher Studio Portfolio">
+    <meta name="keywords" content="photography, gallery, nature, macro, wildlife, portraits">
+    <meta name="author" content="KatGrapher">
+    <title>Photography Gallery - KatGrapher Studio</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.sanity.io">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body class="bg-background text-white min-h-screen">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-green text-black px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+
+    <!-- Header -->
+    <header class="relative z-10">
+        <nav class="container mx-auto px-6 py-6">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <a href="./" class="hover:text-brand-neon transition-colors">
+                        KatGrapher<span class="text-brand-green">.Studio</span>
+                    </a>
+                </div>
+
+                <div class="flex items-center space-x-8">
+                    <a href="index.html#websites" class="hover:text-brand-green transition-colors">Web</a>
+                    <a href="index.html#photography" class="text-brand-green">Photography</a>
+                    <a href="index.html#dj" class="hover:text-brand-green transition-colors">DJ</a>
+                    <a href="index.html#contact" class="hover:text-brand-green transition-colors">Contact</a>
+                    <a href="index.html" class="border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-black px-4 py-2 rounded transition-colors">
+                        Home
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Gallery Header -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Photography <span class="text-brand-green">Gallery</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-12">
+                        A collection of moments captured through the lens. Nature, wildlife, and portrait photography showcasing the beauty in every detail.
+                    </p>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap justify-center gap-4 mb-12">
+                        <button class="category-filter active bg-brand-green text-black px-6 py-3 rounded font-semibold transition-colors"
+                                data-category="all">
+                            All
+                        </button>
+                        <button class="category-filter bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded font-semibold transition-colors"
+                                data-category="animals">
+                            Animals
+                        </button>
+                        <button class="category-filter bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded font-semibold transition-colors"
+                                data-category="insects">
+                            Insects
+                        </button>
+                        <button class="category-filter bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded font-semibold transition-colors"
+                                data-category="people">
+                            People
+                        </button>
+                        <button class="category-filter bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded font-semibold transition-colors"
+                                data-category="plants">
+                            Plants
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Grid -->
+        <section class="px-6 pb-20">
+            <div class="container mx-auto">
+                <div id="photo-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Photo placeholders - will be dynamically populated from Sanity -->
+
+                    <!-- Animals Category -->
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="animals">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Animal Photo 1</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Animal Photo 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="animals">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Animal Photo 2</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Animal Photo 2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="animals">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Animal Photo 3</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Animal Photo 3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="animals">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Animal Photo 4</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Animal Photo 4</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Insects Category -->
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="insects">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Insect Photo 1</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Insect Photo 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="insects">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Insect Photo 2</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Insect Photo 2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="insects">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Insect Photo 3</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Insect Photo 3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="insects">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Insect Photo 4</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Insect Photo 4</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- People Category -->
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="people">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Portrait Photo 1</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Portrait Photo 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="people">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Portrait Photo 2</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Portrait Photo 2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="people">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Portrait Photo 3</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Portrait Photo 3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="people">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Portrait Photo 4</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Portrait Photo 4</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plants Category -->
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="plants">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Plant Photo 1</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Plant Photo 1</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="plants">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Plant Photo 2</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Plant Photo 2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="plants">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Plant Photo 3</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Plant Photo 3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="photo-item aspect-square bg-gray-800 rounded-lg overflow-hidden border border-gray-700 hover:border-brand-green transition-colors cursor-pointer"
+                         data-category="plants">
+                        <div class="w-full h-full flex items-center justify-center bg-gray-900">
+                            <span class="text-gray-400 text-sm">Plant Photo 4</span>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-opacity flex items-end">
+                            <div class="p-4 w-full">
+                                <p class="text-white text-sm opacity-0 hover:opacity-100 transition-opacity">Plant Photo 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More / Loading State -->
+                <div class="text-center mt-12">
+                    <p class="text-gray-400 mb-6">More photos will be loaded from Sanity CMS...</p>
+                    <button id="load-more" class="bg-brand-green hover:bg-brand-green-dark text-black px-8 py-3 rounded font-semibold transition-colors">
+                        Load More Photos
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal (for future implementation) -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="relative max-w-4xl max-h-full">
+                <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+                <button id="lightbox-close" class="absolute top-4 right-4 text-white text-2xl hover:text-brand-green transition-colors">
+                    ×
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+                    <p id="lightbox-caption" class="text-sm"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-gray-800">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">
+                        © 2024 KatGrapher Studio. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-400 hover:text-brand-green transition-colors">Home</a>
+                    <a href="index.html#photography" class="text-brand-green">About Photography</a>
+                    <a href="index.html#contact" class="text-gray-400 hover:text-brand-green transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="./scripts/gallery.js"></script>
+</body>
+</html>
