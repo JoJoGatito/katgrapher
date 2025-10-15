@@ -19,7 +19,7 @@
 export const sanityConfig = {
   // Your Sanity project ID (found in project settings)
   // Example: 'abc123' or 'your-project-id'
-  projectId: 'your-project-id-here',
+  projectId: 'ncpsxckb',
 
   // Dataset name - typically 'production' for live site
   // Use 'staging' or 'development' for preview environments
