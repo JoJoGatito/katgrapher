@@ -4,7 +4,7 @@
   "description": "Portfolio website for katgrapher.studio",
   "main": "index.html",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && tailwindcss -i ./assets/input.css -o ./dist/output.css --minify && cp index.html dist/index.html && cp gallery.html dist/gallery.html && cp -R scripts dist/scripts && for f in CNAME robots.txt sitemap.xml; do [ -f \\\"$f\\\" ] && cp \\\"$f\\\" dist/; done"
+    "build": "rm -rf dist && mkdir -p dist && tailwindcss -i ./assets/input.css -o ./dist/output.css --minify && cp index.html dist/index.html && cp gallery.html dist/gallery.html && cp -R scripts dist/scripts && for f in CNAME robots.txt sitemap.xml; do if [ -f \\\"$f\\\" ]; then cp \\\"$f\\\" dist/ || exit 1; fi; :; done"
   },
   "keywords": [
     "portfolio",
