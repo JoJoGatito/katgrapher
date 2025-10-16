@@ -34,6 +34,22 @@ export async function fetchSanity(query, params = {}, options = {}) {
     const baseUrl = `https://${projectId}.api.sanity.io/${apiVersion}/data/query/${dataset}`;
     const url = new URL(baseUrl);
 
+    // Runtime origin (helps diagnose CORS issues)
+    const origin = (typeof window !== 'undefined' && window.location)
+      ? window.location.origin
+      : 'server';
+
+    // Lightweight debug log (visible in browser devtools)
+    if (typeof window !== 'undefined') {
+      console.debug('[Sanity] Fetch init', {
+        origin,
+        url: url.toString(),
+        projectId,
+        dataset,
+        apiVersion,
+      });
+    }
+
     // Add query and parameters
     url.searchParams.set('query', query);
 
@@ -71,7 +87,24 @@ export async function fetchSanity(query, params = {}, options = {}) {
       // Handle HTTP errors
       if (!response.ok) {
         const errorText = await response.text();
-        throw new Error(`Sanity API error (${response.status}): ${errorText}`);
+
+        // Log details to help diagnose CORS/auth issues
+        console.error('[Sanity] Fetch error', {
+          status: response.status,
+          origin,
+          requestUrl: url.toString(),
+          projectId,
+          dataset,
+          apiVersion,
+          body: errorText?.slice?.(0, 500),
+        });
+
+        const corsHint =
+          (response.status === 401 || response.status === 403)
+            ? ` Possible CORS or auth issue for origin ${origin}. Verify this origin is allowed in project ${projectId} (CORS > Add origin) and enable "Allow credentials" when using authenticated requests.`
+            : '';
+
+        throw new Error(`Sanity API error (${response.status}): ${errorText}${corsHint}`);
       }
 
       // Parse response
@@ -95,7 +128,13 @@ export async function fetchSanity(query, params = {}, options = {}) {
     }
 
   } catch (error) {
-    console.error('Error fetching from Sanity:', error);
+    console.error('Error fetching from Sanity:', {
+      error,
+      origin: (typeof window !== 'undefined' && window.location) ? window.location.origin : 'server',
+      projectId: sanityConfig?.projectId,
+      dataset: sanityConfig?.dataset,
+      apiVersion: sanityConfig?.apiVersion,
+    });
     throw error;
   }
 }
